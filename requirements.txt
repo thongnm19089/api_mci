@@ -1,0 +1,4 @@
+djangorestframework
+drf_spectacular
+drf_spectacular_sidecar
+djangorestframework-simplejwt
