@@ -1,16 +1,13 @@
 from django.db import models 
 from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
-from django.utils.translation import gettext_lazy as _
-from django.conf import settings
+
 class UserProfile(AbstractUser):
-    birth_date = models.DateField(_('birth date'), null=True, blank=True)
-    hometown = models.CharField(_('hometown'), max_length=100, blank=True)
-    school = models.CharField(_('school'), max_length=100, blank=True)
-    avatar = models.TextField(_('url_img'), max_length=100,null=True, blank=True)
+    birth_date = models.DateField(null=True, blank=True)
+    hometown = models.CharField(max_length=100, blank=True)
+    school = models.CharField(max_length=100, blank=True)
+    avatar = models.TextField(max_length=100,null=True, blank=True)
    
-    def __str__(self):
-        return self.username
 class Job(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
